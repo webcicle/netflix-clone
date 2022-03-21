@@ -4,7 +4,7 @@
 // include the chevron icon on the button
 
 import React from 'react';
-import { Input, Button, Text, Container } from './styles/opt-form';
+import { Input, Button, Break, Text, Container } from './styles/opt-form';
 
 export default function OptForm({ children, ...restProps }) {
 	return <Container {...restProps}>{children}</Container>;
@@ -14,7 +14,7 @@ OptForm.Input = function OptFormInput({ ...restProps }) {
 	return <Input {...restProps} />;
 };
 
-OptForm.Button = function OptFormInput({ children, ...restProps }) {
+OptForm.Button = function OptFormButton({ children, ...restProps }) {
 	return (
 		<Button {...restProps}>
 			{children}
@@ -25,4 +25,8 @@ OptForm.Button = function OptFormInput({ children, ...restProps }) {
 
 OptForm.Text = function OptFormText({ children, ...restProps }) {
 	return <Text {...restProps}>{children}</Text>;
+};
+
+OptForm.Break = function OptFormBreak({ ...restProps }) {
+	return <Break {...restProps} />;
 };
